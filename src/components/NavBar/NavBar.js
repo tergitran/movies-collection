@@ -31,12 +31,12 @@ const NavBar = (props) => {
   return (
     <div ref={nav} className={styles["navbar"]}>
       <div className={styles["navbar-logo"]}>
-        <Link to="/">
+        <Link to="/movies-collection">
           <img src="https://fontmeme.com/permalink/201205/445a9aaccfbf169f0958602c6f4038f4.png" />
         </Link>
       </div>
       <div className={styles["navbar-tinylogo"]}>
-        <Link to="/">
+        <Link to="/movies-collection">
           <img src="https://fontmeme.com/permalink/201205/c0152405984f2c6c856de28935b98a55.png" />
         </Link>
       </div>

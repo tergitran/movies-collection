@@ -14,7 +14,7 @@ function App() {
         <NavBar query={query} handleQuery={setQuery} />
         <main className="container">
           <Switch>
-            <Route path="/" exact>
+            <Route path="/movies-collection">
               <Movies query={query} />
             </Route>
             <Route path="/watch/:imdbID">
