@@ -1,0 +1,25 @@
+.result {
+    /* margin: 10px; */
+    min-width: 0;
+    /* cursor: pointer; */
+}
+
+.result img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.result h1 {
+    font-size: 1.1rem;
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; 
+    margin: 5px 0;
+    font-weight: 400;
+}
+
+.result h1:last-child {
+    color: gray;
+}
+

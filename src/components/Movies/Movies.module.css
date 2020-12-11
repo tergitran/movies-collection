@@ -1,0 +1,12 @@
+.movies {
+    position: relative;
+    z-index: 0;
+    top: 90px;
+    margin-bottom: 50px;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
