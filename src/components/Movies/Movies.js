@@ -28,21 +28,21 @@ const useStyles = makeStyles(() => ({
 const doFilter = (filter) => {
   const { genres, country, year, runtime, sortBy } = filter;
 
-  const genres_init = genres == -1 ? "" : `&with_genres=${genres}`;
+  const genres_init = genres === -1 ? "" : `&with_genres=${genres}`;
   const country_init =
-    country == 0 ? "" : `&with_original_language=${countrycode[country].code}`;
-  const year_init = year == -1 ? "" : `&primary_release_year=${year}`;
+    country === 0 ? "" : `&with_original_language=${countrycode[country].code}`;
+  const year_init = year === -1 ? "" : `&primary_release_year=${year}`;
   const runtime_init =
-    runtime == 0
+    runtime === 0
       ? ""
-      : runtime == 1
+      : runtime === 1
       ? `&with_runtime.lte=${thoiluong[runtime].value}`
-      : runtime == 5
+      : runtime === 5
       ? `&with_runtime.gte=${thoiluong[runtime].value}`
       : `&with_runtime.gte=${thoiluong[runtime].value[0]}&with_runtime.lte=${thoiluong[runtime].value[1]}`;
 
   const sortBy_init =
-    sortBy == 0
+    sortBy === 0
       ? `&sort_by=primary_release_date.desc`
       : `&sort_by=vote_average.desc`;
 
@@ -110,7 +110,7 @@ const Movies = (props) => {
           classes={{ ul: classes.ul }}
           count={totalPage}
           page={parseInt(currentPage)}
-          size="large"
+          size="medium"
           onChange={handlePage}
         />
       </div>

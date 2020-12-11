@@ -52,12 +52,19 @@
 
 .navbar-start input {
     align-self: center;
-    margin-left: 16px;
-    padding: 5px;
+    /* width: 170px; */
+    margin-left: 8px;
+    padding: 5px 12px;
     font-size: 14pt;
-    background-color: rgba(52,11,103, 0);    
-    border: 1px white solid;
+    background-color: rgba(110, 30, 190, 0);    
+    outline: none;
+    border: 1.5px white solid;
     color: #fff;
+    border-radius: 10000px;
+}
+.navbar-start input:focus {
+    background-color: rgba(255, 255, 255, 0.8); 
+    color: #000;   
 }
 
 
@@ -111,7 +118,7 @@
 }
 @media screen and (max-width: 480px) {
     .navbar-start input {
-        width: 190px;
+        width: 160px;
         margin-left: 0;
     }
 }
