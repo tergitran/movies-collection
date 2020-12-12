@@ -3,8 +3,6 @@ import styles from "./NavBar.module.css";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-import { MdSearch } from "react-icons/md";
-
 const NavBar = (props) => {
   const [isSideBar, setIsSidebar] = useState(false);
 

@@ -43,10 +43,12 @@ const doFilter = (filter) => {
 
   const sortBy_init =
     sortBy === 0
+      ? ""
+      : sortBy === 1
       ? `&sort_by=primary_release_date.desc`
       : `&sort_by=vote_average.desc`;
 
-  const url_filter = `https://api.themoviedb.org/3/discover/movie?api_key=d4b3bfeaef8ead976d2edf092fb4857a&language=vi${genres_init}${country_init}${year_init}${runtime_init}`;
+  const url_filter = `https://api.themoviedb.org/3/discover/movie?api_key=d4b3bfeaef8ead976d2edf092fb4857a&language=vi${genres_init}${country_init}${year_init}${runtime_init}${sortBy_init}`;
   return url_filter;
 };
 
@@ -55,8 +57,7 @@ const Movies = (props) => {
   const [filter, setFilter] = useState(default_filter);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPage, setTotalPage] = useState(1);
-
-  // const [data, setData] = useState({});
+  const [isListView, setIsListView] = useState(false);
 
   const handleFilter = (filter) => {
     setFilter(filter);
@@ -74,36 +75,27 @@ const Movies = (props) => {
   const url = query === "" ? url_filter : url_query;
   const url_withPage = url + `&page=${currentPage}`;
 
-  // useEffect(() => {
-  //   setTotalPage(data.total_pages);
-  //   console.log("Hello");
-  // });
-
-  const ref = useRef();
-  useEffect(() => {
-    ref.current = url;
-  });
-
-  console.log("Render");
-
   const { data, pagesNumber } = useFetch(url_withPage);
 
   useEffect(() => {
     setTotalPage(pagesNumber);
-    console.log("useEffect", data);
   });
 
   useEffect(() => {
     setCurrentPage(1);
-    console.log("useEffect", data);
   }, [filter, query]);
 
   const classes = useStyles();
 
   return (
     <div className={styles.movies}>
-      <Filters handleFilter={handleFilter} condition={filter} />
-      <Results results={data.results} />
+      <Filters
+        handleFilter={handleFilter}
+        condition={filter}
+        isListView={isListView}
+        handleViewChange={setIsListView}
+      />
+      <Results results={data.results} isListView={isListView} />
       <div className={styles.pagination}>
         <Pagination
           color="secondary"

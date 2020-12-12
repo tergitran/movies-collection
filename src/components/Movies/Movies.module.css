@@ -10,4 +10,13 @@
     display: flex;
     justify-content: center;
     padding-bottom: 32px;
+    padding-top: 32px;
+}
+
+@media screen and (max-width: 768px) {
+    .pagination {
+        position: absolute;
+        left: -10px;
+        right: -10px;
+    }
 }

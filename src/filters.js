@@ -92,6 +92,6 @@ const thoiluong = [
   { id: 5, name: "Trên 2.5 tiếng", value: [150] },
 ];
 
-const sapxep = ["Ngày phát hành", "Điểm đánh giá"];
+const sapxep = ["- Không -", "Ngày phát hành", "Điểm đánh giá"];
 
 export { countrycode, nam, thoiluong, sapxep };

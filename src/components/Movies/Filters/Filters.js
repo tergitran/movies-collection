@@ -9,7 +9,7 @@ const url_theloai =
   "https://api.themoviedb.org/3/genre/movie/list?api_key=d4b3bfeaef8ead976d2edf092fb4857a&language=vi";
 
 const Filters = (props) => {
-  const { handleFilter, condition } = props;
+  const { handleFilter, condition, isListView, handleViewChange } = props;
 
   const { data } = useFetch(url_theloai);
 
@@ -93,8 +93,14 @@ const Filters = (props) => {
       <div className={[styles.filter, styles.theloai].join(" ")}>
         <h1>hiển thị</h1>
         <div className={styles.icon}>
-          <FaTh />
-          <FaThList />
+          <FaTh
+            className={isListView ? null : styles.active}
+            onClick={() => handleViewChange(false)}
+          />
+          <FaThList
+            className={isListView ? styles.active : null}
+            onClick={() => handleViewChange(true)}
+          />
         </div>
       </div>
     </div>

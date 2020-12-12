@@ -1,7 +1,5 @@
 .result {
-    /* margin: 10px; */
     min-width: 0;
-    /* cursor: pointer; */
 }
 
 .result img {
@@ -23,3 +21,66 @@
     color: gray;
 }
 
+
+.listView {
+    padding-top: 16px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    column-gap: 32px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #b5b5b5;
+}
+
+.listView img {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colLeft h1{
+    margin: 0;
+    font-size: 18pt;
+}
+.colLeft h2  {
+    margin: 0;
+    font-size: 14pt;
+    font-weight: 400;
+    color: #b5b5b5;
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap ;
+}
+
+.genres a {
+    border: 1px white solid;
+    border-radius: 10000px;
+    font-size: small;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: aliceblue;
+    margin-right: 8px;
+    margin-bottom: 6px;
+    cursor: default;
+}
+
+
+.overview {
+    color: #b5b5b5;
+    font-size: 12pt;
+}
+
+
+@media screen and (max-width: 768px) {
+    .row {
+        display: block;
+    }
+    .listView{
+        grid-template-columns: 120px 1fr;
+    } 
+
+}

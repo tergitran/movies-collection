@@ -2,14 +2,15 @@
     margin-top: 60px;
     display: flex;
     justify-content: center;
+
 }
 
 .player {
-    width: 80%;
+    width: 100%;
 }
 
 .wrapper {
-    position: relative; padding-bottom: 56.25%; /* 16:9 */  padding-top: 25px;
+    position: relative; padding-bottom: 50%; /* 16:9 */  padding-top: 25px;
 }
 
 .wrapper iframe {

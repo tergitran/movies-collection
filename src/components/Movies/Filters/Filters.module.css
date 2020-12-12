@@ -6,8 +6,8 @@
     /* background-color: #011C2D; */
     background-color: #07253b;
     border-radius: 5px;
-    padding: 10px;
-    margin: 0 20px;
+    padding:  16px;
+    /* margin: 0 20px; */
 
     position: relative;
     z-index: 0;
@@ -45,19 +45,27 @@
     font-size: 1.5rem;
 }
 
+.icon > * {
+    cursor: pointer;
+}
+.active {
+    color: #a3a7aa;
+}
+
 @media screen and (max-width: 1000px) {
 
     .filters {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        /* width: 80%;
-        margin: auto; */
+        /* width: 80%; */
+        /* margin: 0 16px; */
     }
 }
 @media screen and (max-width: 768px) {
     .filters {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        margin: 0 16px;
     }
 }
 @media screen and (max-width: 480px) {
