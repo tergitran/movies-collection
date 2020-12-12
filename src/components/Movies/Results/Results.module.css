@@ -16,6 +16,10 @@
         margin: 20px 16px;
     } 
 
+    .listView {
+        margin: 20px 16px;
+    }
+
 }
 @media screen and (max-width: 480px) {
     .results{
